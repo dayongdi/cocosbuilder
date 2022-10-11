@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="17701" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <deployment version="1070" identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="17701"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="JavaScriptDocument">
+            <connections>
+                <outlet property="docWindow" destination="5" id="100044"/>
+                <outlet property="jsView" destination="100026" id="100043"/>
+                <outlet property="quickJumpButton" destination="100186" id="100199"/>
+                <outlet property="warningButton" destination="100096" id="100150"/>
+                <outlet property="window" destination="5" id="18"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <window title="Window" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" animationBehavior="default" id="5" userLabel="Window">
+            <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
+            <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
+            <rect key="contentRect" x="133" y="235" width="507" height="413"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="2560" height="1415"/>
+            <value key="minSize" type="size" width="94" height="86"/>
+            <view key="contentView" id="6">
+                <rect key="frame" x="0.0" y="0.0" width="507" height="413"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <customView translatesAutoresizingMaskIntoConstraints="NO" id="100026">
+                        <rect key="frame" x="0.0" y="0.0" width="507" height="391"/>
+                    </customView>
+                    <imageView translatesAutoresizingMaskIntoConstraints="NO" id="100046">
+                        <rect key="frame" x="-3" y="391" width="513" height="23"/>
+                        <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="axesIndependently" image="editor-border" id="100047"/>
+                    </imageView>
+                    <popUpButton translatesAutoresizingMaskIntoConstraints="NO" id="100096">
+                        <rect key="frame" x="-12" y="392" width="109" height="20"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="20" id="100132"/>
+                            <constraint firstAttribute="width" constant="104" id="100175"/>
+                        </constraints>
+                        <popUpButtonCell key="cell" type="bevel" title="9999 Errors" bezelStyle="rounded" imagePosition="left" alignment="left" lineBreakMode="truncatingTail" state="on" inset="2" pullsDown="YES" arrowPosition="noArrow" selectedItem="100099" id="100097">
+                            <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
+                            <font key="font" metaFont="smallSystem"/>
+                            <menu key="menu" title="OtherViews" id="100098">
+                                <items>
+                                    <menuItem title="9999 Errors" state="on" image="editor-warning" hidden="YES" id="100099"/>
+                                    <menuItem title="Item 2" id="100100"/>
+                                    <menuItem title="Item 3" id="100101"/>
+                                </items>
+                            </menu>
+                        </popUpButtonCell>
+                    </popUpButton>
+                    <popUpButton translatesAutoresizingMaskIntoConstraints="NO" id="100186">
+                        <rect key="frame" x="94" y="392" width="109" height="20"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="104" id="100188"/>
+                        </constraints>
+                        <popUpButtonCell key="cell" type="bevel" title="Quick Jump" bezelStyle="rounded" imagePosition="left" alignment="left" lineBreakMode="truncatingTail" state="on" inset="2" pullsDown="YES" arrowPosition="noArrow" selectedItem="100193" id="100189">
+                            <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
+                            <font key="font" metaFont="smallSystem"/>
+                            <menu key="menu" title="OtherViews" id="100190">
+                                <items>
+                                    <menuItem title="Quick Jump" state="on" image="editor-jump" hidden="YES" id="100193"/>
+                                    <menuItem title="Item 2" id="100192"/>
+                                    <menuItem title="Item 3" id="100191"/>
+                                </items>
+                            </menu>
+                        </popUpButtonCell>
+                    </popUpButton>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="100026" firstAttribute="leading" secondItem="6" secondAttribute="leading" id="100040"/>
+                    <constraint firstItem="100026" firstAttribute="bottom" secondItem="6" secondAttribute="bottom" id="100041"/>
+                    <constraint firstItem="100026" firstAttribute="top" secondItem="6" secondAttribute="top" constant="22" id="100060"/>
+                    <constraint firstItem="100026" firstAttribute="trailing" secondItem="6" secondAttribute="trailing" id="100107"/>
+                    <constraint firstItem="100046" firstAttribute="centerX" secondItem="100026" secondAttribute="centerX" id="100109"/>
+                    <constraint firstItem="100096" firstAttribute="top" secondItem="6" secondAttribute="top" constant="1" id="100141"/>
+                    <constraint firstItem="100096" firstAttribute="leading" secondItem="6" secondAttribute="leading" constant="-7" id="100149"/>
+                    <constraint firstAttribute="trailing" secondItem="100046" secondAttribute="trailing" constant="-3" id="100152"/>
+                    <constraint firstItem="100046" firstAttribute="leading" secondItem="6" secondAttribute="leading" constant="-3" id="100153"/>
+                    <constraint firstItem="100046" firstAttribute="top" secondItem="6" secondAttribute="top" constant="-1" id="100183"/>
+                    <constraint firstItem="100186" firstAttribute="baseline" secondItem="100096" secondAttribute="baseline" id="100196"/>
+                    <constraint firstItem="100186" firstAttribute="leading" secondItem="6" secondAttribute="leading" constant="99" id="100197"/>
+                    <constraint firstItem="100186" firstAttribute="top" secondItem="100096" secondAttribute="top" id="100198"/>
+                </constraints>
+            </view>
+            <connections>
+                <outlet property="delegate" destination="-2" id="17"/>
+            </connections>
+            <point key="canvasLocation" x="139" y="104"/>
+        </window>
+        <customObject id="-3" userLabel="Application"/>
+    </objects>
+    <resources>
+        <image name="editor-border" width="16" height="23"/>
+        <image name="editor-jump" width="16" height="16"/>
+        <image name="editor-warning" width="16" height="16"/>
+    </resources>
+</document>
